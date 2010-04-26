@@ -1,0 +1,12 @@
+*~
+*.info
+*.mode1v3
+*.pbxuser
+.DS_Store
+/aclocal.m4
+/autom4te.cache/
+/build-aux/
+/config.h.in
+/configure
+/m4/
+Makefile.in
