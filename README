@@ -1,0 +1,70 @@
+
+   zArchive
+   Copyright (C) 2010 Bindle Binaries
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110 USA
+
+
+zArchive
+====================
+
+   zArchive is an API which allows programs to create, modify, and read
+   archive files that adhere to the PK Zip File Format Specification published
+   by PKWARE Inc.
+
+
+Software Requirements
+=====================
+
+   Git 1.6.6
+   GNU Autoconf 2.65
+   GNU Automake 1.11.1
+   GNU GCC 4.2.1
+   GNU Gettext 0.17
+   GNU Libtool 2.2.6b
+   GNU Make 3.81
+   GNU Texinfo 4.13
+
+   zArchive has been tested using the above software versions.
+
+
+Maintainers
+===========
+
+   David M. Syzdek
+   Bindle Binaries
+   syzdek@bindlebinaries.com
+
+Source Code
+===========
+
+   Browse Source:
+      http://scm.bindlebinaries.com/scm/com.bindlebinaries/zArchive.git
+
+   Git URLs:
+      git://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
+      http://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
+
+   Downloading Source:
+
+      $ git clone \
+        git://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive
+
+   Git Branches:
+      master - Current release of packages.
+      next   - changes staged for next release
+      pu     - proposed updates for next release
+      xx/yy+ - branch for testing new changes before merging to 'pu' branch
+
