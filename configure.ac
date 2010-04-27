@@ -93,6 +93,9 @@ AC_DMS_ENABLE_WARNINGS
 # easter egg check
 AC_CHECK_LIB([ane],[vehicle()],[AC_MSG_NOTICE([Head on collision detected.])])
 
+# sets package version based on the SCM
+AC_DMS_GIT_PACKAGE_VERSION
+
 # Creates outputs
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
