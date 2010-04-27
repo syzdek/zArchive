@@ -59,7 +59,7 @@ lib_libzArchive_la_LDFLAGS		= -rpath '$(libdir)' \
 lib_libzArchive_la_SOURCES		= include/zArchive.h \
 					  lib/libzArchive.h \
 					  lib/libzArchive_memory.c \
-					  lib/libzArchive_memory.h
+					  lib/libzArchive_misc.c
 
 
 # macros for src/zArchive
