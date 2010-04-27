@@ -67,6 +67,10 @@
 #define PROGRAM_NAME "zArchive"
 #endif
 
+#define MY_OPT_CREATE   0x01
+#define MY_OPT_EXTRACT  0x02
+#define MY_OPT_EXAMINE  0x04
+
 
 //////////////////
 //              //
@@ -96,10 +100,14 @@ void zarchive_version PARAMS((void));
 int main(int argc, char * argv[])
 {
    int           c;
+   int           opts;
    int           opt_index;
+   int           verbose;
+   int           quiet;
+   const char  * output;
    zArchive    * zd;
 
-   static char   short_opt[] = "hqvV";
+   static char   short_opt[] = "ceho:qvVx";
    static struct option long_opt[] =
    {
       {"help",          no_argument, 0, 'h'},
@@ -110,7 +118,11 @@ int main(int argc, char * argv[])
       {NULL,            0,           0, 0  }
    };
 
+   opts               = MY_OPT_EXAMINE;
+   quiet              = 0;
+   verbose            = 0;
    opt_index          = 0;
+   output             = NULL;
 
    if (!(zd = zarchive_init()))
    {
@@ -125,17 +137,33 @@ int main(int argc, char * argv[])
          case -1:	/* no more arguments */
          case 0:	/* long options toggles */
             break;
+         case 'c':
+            opts = (opts & 0xFFF0) | MY_OPT_CREATE;
+            break;
+         case 'e':
+            opts = (opts & 0xFFF0) | MY_OPT_EXAMINE;
+            break;
          case 'h':
             zarchive_usage();
             zarchive_free(zd);
             return(0);
+         case 'o':
+            output = optarg;
+            break;
          case 'q':
+            quiet = 1;
+            verbose = 0;
             break;
          case 'V':
             zarchive_version();
             zarchive_free(zd);
             return(0);
          case 'v':
+            verbose++;
+            quiet = 0;
+            break;
+         case 'x':
+            opts = (opts & 0xFFF0) | MY_OPT_EXTRACT;
             break;
          case '?':
             fprintf(stderr, _("Try `%s --help' for more information.\n"), PROGRAM_NAME);
@@ -164,10 +192,14 @@ void zarchive_usage(void)
    // line. The two strings referenced are: PROGRAM_NAME, and
    // PACKAGE_BUGREPORT
    printf(_("Usage: %s [OPTIONS]\n"
+         "  -c                        create ZIP archive\n"
+         "  -e                        examine ZIP archive\n"
          "  -h, --help                print this help and exit\n"
+         "  -o file                   output file\n"
          "  -q, --quiet, --silent     do not print messages\n"
          "  -v, --verbose             print verbose messages\n"
          "  -V, --version             print version number and exit\n"
+         "  -x                        extract files from archive\n"
          "\n"
          "Report bugs to <%s>.\n"
       ), PROGRAM_NAME, PACKAGE_BUGREPORT
