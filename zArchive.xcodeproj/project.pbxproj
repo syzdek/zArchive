@@ -13,6 +13,7 @@
 		A072CAD5118674FE00D660B1 /* libzArchive_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A072CAD3118674FE00D660B1 /* libzArchive_memory.c */; };
 		A0964FD01186BD4C000BB8AF /* libzArchive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC0630554660B00DB518D /* libzArchive.a */; };
 		A0964FD11186BD67000BB8AF /* zArchive.c in Sources */ = {isa = PBXBuildFile; fileRef = A072CAD61186751400D660B1 /* zArchive.c */; };
+		A096505611874705000BB8AF /* libzArchive_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = A096505411874705000BB8AF /* libzArchive_misc.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		A072CAE711867B1300D660B1 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		A072CB131186837E00D660B1 /* libzArchive.sym */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = libzArchive.sym; sourceTree = "<group>"; };
 		A0964FCA1186BD33000BB8AF /* zArchive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = zArchive; sourceTree = BUILT_PRODUCTS_DIR; };
+		A096505411874705000BB8AF /* libzArchive_misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libzArchive_misc.c; sourceTree = "<group>"; };
 		D2AAC0630554660B00DB518D /* libzArchive.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				A072CB131186837E00D660B1 /* libzArchive.sym */,
 				A072CAD3118674FE00D660B1 /* libzArchive_memory.c */,
 				A072CAD2118674FE00D660B1 /* libzArchive_memory.h */,
+				A096505411874705000BB8AF /* libzArchive_misc.c */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A072CAD5118674FE00D660B1 /* libzArchive_memory.c in Sources */,
+				A096505611874705000BB8AF /* libzArchive_misc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
