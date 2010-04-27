@@ -100,16 +100,6 @@
 #endif
 
 
-///////////////
-//           //
-//  Headers  //
-//           //
-///////////////
-
-#include <inttypes.h>
-#include <sys/types.h>
-
-
 /////////////////
 //             //
 //  Datatypes  //
@@ -127,90 +117,6 @@ typedef struct zarchive_disk zArchiveDisk;
 
 /// zArchive local file header
 typedef struct zarchive_local_file zArchiveLocalFile;
-
-
-/////////////////
-//             //
-//  Structs    //
-//             //
-/////////////////
-
-/// internal libzArchive.la state data
-struct zarchive
-{
-   size_t flags;                ///< zArchive option flags
-   size_t numOfDisks;           ///< number of disks in archive
-   size_t numOfFiles;           ///< number of central directory file headers
-   zArchiveCentralFile * files; ///< array of central directory file headers
-   zArchiveDisk * disks;        ///< array of ZIP disks
-};
-
-
-/// zArchive end of central directory record
-struct zarchive_disk
-{
-   // Zip end of central directory record
-   size_t sig;                    ///< End of central directory signature = 0x06054b50
-   size_t thisDiskNumber;         ///< Number of this disk
-   size_t dirStartDisk;           ///< Disk where central directory starts
-   size_t dirDiskRecordCount;     ///< Number of central directory records on this disk
-   size_t totalDirRecords;        ///< Total number of central directory records
-   size_t dirSize;                ///< Size of central directory (bytes)
-   size_t dirOffset;              ///< Offset of start of central directory, relative to start of archive
-   size_t commentLen;             ///< ZIP file comment length (n)
-   size_t localCount;             ///< number of local files
-   size_t centralCount;           ///< number of central directory records
-   char                * comment;      ///< ZIP file comment
-   zArchiveLocalFile   * localFiles;   ///< array of local files
-   zArchiveCentralFile * centralFiles; ///< array of central directory records
-};
-
-
-/// zArchive central directory file header
-struct zarchive_central_file
-{
-   size_t    sig;               ///< Central directory file header signature = 0x02014b50
-   size_t    version;           ///< Version made by
-   size_t    minVersion;        ///< Version needed to extract (minimum)
-   size_t    flags;             ///< General purpose bit flag
-   size_t    compressionMethod; ///< Compression method
-   size_t    modTime;           ///< File last modification time
-   size_t    modDate;           ///< File last modification date
-   size_t    crc32;             ///< CRC-32
-   size_t    compressSize;      ///< Compressed size
-   size_t    uncompressSize;    ///< Uncompressed size
-   size_t    nameLen;           ///< File name length (n)
-   size_t    extraLen;          ///< Extra field length (m)
-   size_t    commentLen;        ///< File comment length (k)
-   size_t    diskNum;           ///< Disk number where file starts
-   size_t    internalAttrs;     ///< Internal file attributes
-   size_t    externalAttrs;     ///< External file attributes
-   off_t     offset;            ///< Relative offset of local file header
-   char    * name;              ///< File name
-   char    * extra;             ///< Extra field
-   char    * comment;           ///< File comment
-};
-
-
-/// zArchive local file header
-struct zarchive_local_file
-{
-   size_t    sig;                 ///< Central directory file header signature = 0x02014b50
-   size_t    version;             ///< Version made by
-   size_t    minVersion;          ///< Version needed to extract (minimum)
-   size_t    flags;               ///< General purpose bit flag
-   size_t    compressionMethod;   ///< Compression method
-   size_t    modTime;             ///< File last modification time
-   size_t    modDate;             ///< File last modification date
-   size_t    crc32;               ///< CRC-32
-   size_t    compressSize;        ///< Compressed size
-   size_t    uncompressSize;      ///< Uncompressed size
-   size_t    nameLen;             ///< File name length (n)
-   size_t    extraLen;            ///< Extra field length (m)
-   char    * name;                ///< File name
-   char    * extra;               ///< Extra field
-   uint8_t * data;                ///< compressed data
-};
 
 
 //////////////////
