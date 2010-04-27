@@ -160,4 +160,19 @@ struct zarchive_local_file
    uint8_t * data;                ///< compressed data
 };
 
+
+//////////////////
+//              //
+//  Prototypes  //
+//              //
+//////////////////
+
+// converts a little endian buffer into an unsigned value
+int zarchive_buff2unsigned PARAMS((const uint8_t * buff, uintmax_t * u,
+   size_t size, off_t offset));
+
+// inserts an unsigned value into a little endian buffer
+int zarchive_unsigned2buff PARAMS((uintmax_t u, uint8_t * buff, size_t size,
+   off_t offset));
+
 #endif /* end of header file */

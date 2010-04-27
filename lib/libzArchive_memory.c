@@ -44,6 +44,27 @@
 //             //
 /////////////////
 
+/// converts a buffer into an unsigned value
+/// @param[in]  buff       input buffer in little endian order
+/// @param[out] u          output buffer
+/// @param[in]  size       size of value to read from buffer
+/// @param[in]  offset     offset within buffer to start reading
+int zarchive_buff2unsigned(const uint8_t * buff, uintmax_t * u, size_t size,
+   off_t offset)
+{
+   size_t pos;
+   if (size > sizeof(u))
+   {
+      errno = ENOMEM;
+      return(-1);
+   };
+   *u = 0L;
+   for(pos = 1; pos < (size+1); pos++)
+      *u = ((*u) << 8) | buff[offset+size-pos];
+   return(0);
+}
+
+
 /// frees memory from zArchive
 /// @param[in]  zd     pointer to archive state
 void zarchive_free(zArchive * zd)
@@ -75,6 +96,29 @@ void zarchive_reset(zArchive * zd)
 {
    memset(zd, 0, sizeof(zArchive));
    return;
+}
+
+
+/// inserts an unsigned value into a little endian buffer
+/// @param[in]  u          input buffer for unsigned value
+/// @param[out] buff       output buffer in little endian order
+/// @param[in]  size       size of value to read from buffer
+/// @param[in]  offset     offset within buffer to start reading
+int zarchive_unsigned2buff(uintmax_t u, uint8_t * buff, size_t size,
+   off_t offset)
+{
+   size_t pos;
+   if (size > sizeof(u))
+   {
+      errno = ENOMEM;
+      return(-1);
+   };
+   for(pos = 0; pos < size; pos++)
+   {
+      buff[pos+offset] = (uint8_t)(u & 0xFF);
+      u = u >> 8;
+   };
+   return(0);
 }
 
 /* end of source code */
