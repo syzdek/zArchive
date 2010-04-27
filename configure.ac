@@ -90,6 +90,7 @@ AC_PROG_LIBTOOL
 # custom configure options
 AC_DMS_ENABLE_WARNINGS
 
+# easter egg check
 AC_CHECK_LIB([ane],[vehicle()],[AC_MSG_NOTICE([Head on collision detected.])])
 
 # Creates outputs
