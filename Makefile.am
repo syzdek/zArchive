@@ -58,6 +58,9 @@ lib_libzArchive_la_LDFLAGS		= -rpath '$(libdir)' \
 					  -export-symbols $(srcdir)/lib/libzArchive.sym
 lib_libzArchive_la_SOURCES		= include/zArchive.h \
 					  lib/libzArchive.h \
+					  lib/libzArchive_archive.c \
+					  lib/libzArchive_disk.c \
+					  lib/libzArchive_file.c \
 					  lib/libzArchive_memory.c \
 					  lib/libzArchive_misc.c
 
