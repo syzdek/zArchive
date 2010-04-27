@@ -24,7 +24,6 @@
  *  @file lib/zArchive_memory.c functions for querying information about the library 
  */
 #define _ZARCHIVE_LIB_ZARCHIVE_MEMORY_C 1
-#include "libzArchive_memory.h"
 
 ///////////////
 //           //
