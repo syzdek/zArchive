@@ -1,0 +1,274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A072CACF118674CC00D660B1 /* zArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = A072CACE118674CC00D660B1 /* zArchive.h */; };
+		A072CAD1118674E900D660B1 /* libzArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = A072CAD0118674E900D660B1 /* libzArchive.h */; };
+		A072CAD4118674FE00D660B1 /* libzArchive_memory.h in Headers */ = {isa = PBXBuildFile; fileRef = A072CAD2118674FE00D660B1 /* libzArchive_memory.h */; };
+		A072CAD5118674FE00D660B1 /* libzArchive_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A072CAD3118674FE00D660B1 /* libzArchive_memory.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A072CA83118647F500D660B1 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		A072CA89118647F500D660B1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A072CA8C118649D400D660B1 /* APPNOTE.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APPNOTE.TXT; sourceTree = "<group>"; };
+		A072CA8E11864A2F00D660B1 /* configure.ac */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = configure.ac; sourceTree = "<group>"; };
+		A072CA8F11864A2F00D660B1 /* Makefile.am */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; indentWidth = 8; path = Makefile.am; sourceTree = "<group>"; tabWidth = 8; };
+		A072CA9511864AC000D660B1 /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = acinclude.m4; sourceTree = "<group>"; };
+		A072CAA511864FAC00D660B1 /* LicenseHeader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LicenseHeader.txt; sourceTree = "<group>"; };
+		A072CAB7118654B600D660B1 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		A072CAB8118654EB00D660B1 /* ChangeLog */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = ChangeLog; sourceTree = "<group>"; };
+		A072CACE118674CC00D660B1 /* zArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zArchive.h; sourceTree = "<group>"; };
+		A072CAD0118674E900D660B1 /* libzArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libzArchive.h; sourceTree = "<group>"; };
+		A072CAD2118674FE00D660B1 /* libzArchive_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libzArchive_memory.h; sourceTree = "<group>"; };
+		A072CAD3118674FE00D660B1 /* libzArchive_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libzArchive_memory.c; sourceTree = "<group>"; };
+		A072CAD61186751400D660B1 /* zArchive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zArchive.c; sourceTree = "<group>"; };
+		A072CAE711867B1300D660B1 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		A072CB131186837E00D660B1 /* libzArchive.sym */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = libzArchive.sym; sourceTree = "<group>"; };
+		D2AAC0630554660B00DB518D /* libzArchive.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzArchive.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289988505E68E00004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* zArchive */ = {
+			isa = PBXGroup;
+			children = (
+				A072CAB7118654B600D660B1 /* AUTHORS */,
+				A072CA83118647F500D660B1 /* COPYING */,
+				A072CAB8118654EB00D660B1 /* ChangeLog */,
+				A072CA89118647F500D660B1 /* README */,
+				A072CA9511864AC000D660B1 /* acinclude.m4 */,
+				A072CAA411864FAC00D660B1 /* build-aux */,
+				A072CA8E11864A2F00D660B1 /* configure.ac */,
+				A072CA84118647F500D660B1 /* doc */,
+				A072CA86118647F500D660B1 /* examples */,
+				A072CA87118647F500D660B1 /* include */,
+				A072CA88118647F500D660B1 /* lib */,
+				A072CA8F11864A2F00D660B1 /* Makefile.am */,
+				A072CA8A118647F500D660B1 /* src */,
+				A072CA8B118647F500D660B1 /* tests */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = zArchive;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0630554660B00DB518D /* libzArchive.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A072CA84118647F500D660B1 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				A072CA8C118649D400D660B1 /* APPNOTE.TXT */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		A072CA86118647F500D660B1 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		A072CA87118647F500D660B1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A072CACE118674CC00D660B1 /* zArchive.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		A072CA88118647F500D660B1 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A072CAD0118674E900D660B1 /* libzArchive.h */,
+				A072CB131186837E00D660B1 /* libzArchive.sym */,
+				A072CAD3118674FE00D660B1 /* libzArchive_memory.c */,
+				A072CAD2118674FE00D660B1 /* libzArchive_memory.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A072CA8A118647F500D660B1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A072CAE711867B1300D660B1 /* common.h */,
+				A072CAD61186751400D660B1 /* zArchive.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A072CA8B118647F500D660B1 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		A072CAA411864FAC00D660B1 /* build-aux */ = {
+			isa = PBXGroup;
+			children = (
+				A072CAA511864FAC00D660B1 /* LicenseHeader.txt */,
+			);
+			path = "build-aux";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0600554660B00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A072CACF118674CC00D660B1 /* zArchive.h in Headers */,
+				A072CAD1118674E900D660B1 /* libzArchive.h in Headers */,
+				A072CAD4118674FE00D660B1 /* libzArchive_memory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0620554660B00DB518D /* zArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "zArchive" */;
+			buildPhases = (
+				D2AAC0600554660B00DB518D /* Headers */,
+				D2AAC0610554660B00DB518D /* Sources */,
+				D289988505E68E00004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zArchive;
+			productName = zArchive;
+			productReference = D2AAC0630554660B00DB518D /* libzArchive.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "zArchive" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* zArchive */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC0620554660B00DB518D /* zArchive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0610554660B00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A072CAD5118674FE00D660B1 /* libzArchive_memory.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB914B08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = zArchive;
+			};
+			name = Debug;
+		};
+		1DEB914C08733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = zArchive;
+			};
+			name = Release;
+		};
+		1DEB914F08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB915008733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "zArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914B08733D8E0010E9CD /* Debug */,
+				1DEB914C08733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "zArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914F08733D8E0010E9CD /* Debug */,
+				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
