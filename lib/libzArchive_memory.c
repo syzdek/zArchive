@@ -69,6 +69,7 @@ int zarchive_buff2unsigned(const uint8_t * buff, uintmax_t * u, size_t size,
 /// @param[in]  zd     pointer to archive state
 void zarchive_free(zArchive * zd)
 {
+   zarchive_reset(zd);
    free(zd);
    return;
 }
