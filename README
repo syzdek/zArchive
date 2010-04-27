@@ -57,17 +57,32 @@ Source Code
       http://scm.bindlebinaries.com/scm/com.bindlebinaries/zArchive.git
 
    Git URLs:
-      git://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
+      git://git.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
       http://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
+      ssh://ssh.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
 
    Downloading Source:
 
       $ git clone \
-        git://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive
+        git://git.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
 
    Git Branches:
       master - Current release of packages.
       next   - changes staged for next release
       pu     - proposed updates for next release
       xx/yy+ - branch for testing new changes before merging to 'pu' branch
+
+
+Simple Build from Git
+=====================
+
+   $ git clone \
+     git://git.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/zArchive.git
+   $ cd zArchive
+   $ autoreconf -i -f -m
+   $ mkdir build && cd build
+   $ ../configure
+   $ make
+   $ make check
+   $ make install
 
